@@ -1,0 +1,10 @@
+{
+    "address": "localhost",
+    "topics": [
+        "radar_debug",
+        "pc_detected",
+        "aligned_trans",
+        "init_trans"
+    ],
+    "draw_topic": "radar_debug"
+}
