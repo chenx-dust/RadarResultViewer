@@ -35,8 +35,8 @@ public:
             out.flush();
             std::cout << "Recieve " << recieve_count << " messages" << std::endl;
         }
-        std::cout << "*" << message->topic << " " << boost::posix_time::to_iso_string(boost::posix_time::second_clock::local_time()) << " " << (char*)message->payload << std::endl;
-        out << "*" << message->topic << " " << boost::posix_time::to_iso_string(boost::posix_time::second_clock::local_time()) << " " << (char*)message->payload << std::endl;
+        // std::cout << "*" << message->topic << " " << boost::posix_time::to_iso_string(boost::posix_time::microsec_clock::local_time()) << " " << (char*)message->payload << std::endl;
+        out << "*" << message->topic << " " << boost::posix_time::to_iso_string(boost::posix_time::microsec_clock::local_time()) << " " << (char*)message->payload << std::endl;
         if (message->topic != draw_topic)
             return;
         std::string payload(static_cast<char *>(message->payload), message->payloadlen);
